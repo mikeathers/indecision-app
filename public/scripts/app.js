@@ -67,17 +67,9 @@ var IndecisionApp = function (_React$Component) {
                 "div",
                 null,
                 React.createElement(Header, { title: title, subtitle: subtitle }),
-                React.createElement(Action, {
-                    hasOptions: this.state.options.length > 0,
-                    handlePick: this.handlePick
-                }),
-                React.createElement(Options, {
-                    options: this.state.options,
-                    handleDeleteOptions: this.handleDeleteOptions
-                }),
-                React.createElement(AddOption, {
-                    handleAddOption: this.handleAddOption
-                })
+                React.createElement(Action, { hasOptions: this.state.options.length > 0, handlePick: this.handlePick }),
+                React.createElement(Options, { options: this.state.options, handleDeleteOptions: this.handleDeleteOptions }),
+                React.createElement(AddOption, { handleAddOption: this.handleAddOption })
             );
         }
     }]);
@@ -252,4 +244,20 @@ var AddOption = function (_React$Component6) {
     return AddOption;
 }(React.Component);
 
-ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById("app"));
+var User = function User() {
+    return React.createElement(
+        "div",
+        null,
+        React.createElement(
+            "p",
+            null,
+            "Name: "
+        ),
+        React.createElement(
+            "p",
+            null,
+            "Age: "
+        )
+    );
+};
+ReactDOM.render(React.createElement(User, null), document.getElementById("app"));

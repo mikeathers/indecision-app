@@ -44,17 +44,9 @@ class IndecisionApp extends React.Component {
         return (
             <div>
                 <Header title={title} subtitle={subtitle} />
-                <Action 
-                    hasOptions={this.state.options.length > 0}
-                    handlePick={this.handlePick}
-                /> 
-                <Options 
-                    options={this.state.options}
-                    handleDeleteOptions={this.handleDeleteOptions}
-                />
-                <AddOption 
-                    handleAddOption={this.handleAddOption}
-                />
+                <Action hasOptions={this.state.options.length > 0} handlePick={this.handlePick} /> 
+                <Options options={this.state.options} handleDeleteOptions={this.handleDeleteOptions} />
+                <AddOption handleAddOption={this.handleAddOption} />
             </div>
         );
     }
@@ -71,8 +63,7 @@ class Header extends React.Component {
     }
 }
 
-class Action extends React.Component {
-   
+class Action extends React.Component {   
     render() {
         return (
           <div>
@@ -83,8 +74,7 @@ class Action extends React.Component {
     }
 }
 
-class Options extends React.Component {
-        
+class Options extends React.Component {        
     render() {
         return (
             <div>
@@ -135,4 +125,12 @@ class AddOption extends React.Component {
     }
 }
 
-ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
+const User = () => {
+    return (
+        <div>
+            <p>Name: </p>
+            <p>Age: </p>
+        </div>
+    );
+}
+ReactDOM.render(<User />, document.getElementById("app"));

@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react ",
     "watch": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "start": "nodemon app"
+    "start": "nodemon src/app.js"
   },
   "dependencies": {
     "babel-preset-env": "1.5.2",
