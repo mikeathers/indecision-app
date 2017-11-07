@@ -9,6 +9,7 @@ class IndecisionApp extends React.Component {
             options: []
         };
     };
+    
     componentDidMount() {
         try {
             const json = localStorage.getItem("options");
@@ -19,10 +20,9 @@ class IndecisionApp extends React.Component {
             }
         } catch (e) {
 
-        }
-        
-        
+        }        
     }
+
     componentDidUpdate(prevProps, prevState) {
         // only fires if data changes.
         if (prevState.options.length !== this.state.options.length) {
@@ -30,6 +30,7 @@ class IndecisionApp extends React.Component {
             localStorage.setItem("options", json);
         }      
     }
+
     componentWillUnmount() {
         console.log("component will unmount");
     }
