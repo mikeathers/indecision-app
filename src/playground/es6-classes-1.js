@@ -4,7 +4,7 @@ class Person {
     this.age = age;
   }
   getDescription() {
-    return `${this.name} is ${this.age} year(s) old`; 
+    return `${this.name} is ${this.age} year(s) old`;
   }
 }
 
@@ -26,7 +26,7 @@ class Student extends Person {
     }
     return description;
   }
-} 
+}
 
 class Traveler extends Person {
   constructor(name, age, homeLocation) {
@@ -34,11 +34,11 @@ class Traveler extends Person {
     this.homeLocation = homeLocation;
   }
 
- 
+
   getDescription() {
     let description = super.getDescription();
 
-    if (this.homeLocation){
+    if (this.homeLocation) {
       description += ` Their home location is ${this.homeLocation}.`;
     }
     return description;

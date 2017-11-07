@@ -13,14 +13,14 @@ console.log("nameConst", nameConst);
 
 
 function getPetName() {
-    var petName = "Hal";
-    return petName;
-} 
+  var petName = "Hal";
+  return petName;
+}
 
 const fullName = "Andrew Mead";
-let firstName; 
-if(fullName) {
-    firstName = fullName.split(" ")[0];
-    console.log(firstName);
+let firstName;
+if (fullName) {
+  firstName = fullName.split(" ")[0];
+  console.log(firstName);
 }
- console.log(firstName);  
+console.log(firstName);  
