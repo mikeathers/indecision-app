@@ -4,12 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "live-server public/",
+    "build": "webpack --watch",
     "compile": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react ",
-    "watch": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "start": "nodemon src/app.js"
+    "watch": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "dependencies": {
+    "babel-cli": "6.24.1",
     "babel-preset-env": "1.5.2",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+    "live-server": "^1.2.0",
+    "webpack": "3.1.0"
   }
 }
