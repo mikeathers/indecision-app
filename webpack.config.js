@@ -1,22 +1,27 @@
-// entry point
-// output file
-
-const path = require("path");
-
 // Local directory + public folder.
 //console.log(path.join(__dirname, "public"));
 
-module.exports = {
+const path = require("path");
+
+// entry/output - Creates bundle file, converting app.js and all dependencies into 1 bundle.js file.
+// module - Allows babel to convert .js files into the presets we define in .babelrc. 
+// devtool - Shows original JS files rather than bundle.js when debugging.
+
+module.exports = { 
   entry: "./src/app.js",
   output: {
     path: path.join(__dirname, "public"),
     filename: "bundle.js"
   },
-  module: {
+  module: { 
     rules: [{
       loader: "babel-loader",
       test: /\.js$/,
-      exclude: /node_modules/
+      exclude: /node_modules/ 
     }]
+  },
+  devtool: "cheap-module-eval-source-map", 
+  devServer: {
+    contentBase: path.join(__dirname, "public")
   }
 };
